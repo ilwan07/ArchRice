@@ -5,7 +5,7 @@
     "modules-right": ["cpu", "memory", "pulseaudio", "network", "clock"],
 
     "clock": {
-      "format": "<span foreground='#eba0ac'>   </span>{:%d/%m/%Y %H:%M}",
+      "format": "<span foreground='#eba0ac'>  </span>{:%d/%m/%Y %H:%M}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     
