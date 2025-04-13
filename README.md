@@ -13,10 +13,14 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - swaync
 - waybar
 - pavucontrol
-- cascadia code nerd font
-- (firefox)
-- (nemo)
-- (cliphist)
+- ttf-cascadia-code-nerd
+- ttf-font-awesome
+- firefox
+- nemo
+- cliphist
+- oxygen-cursors
+- wofi
+- fastfetch
 
 ### Ressources
 

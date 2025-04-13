@@ -8,18 +8,21 @@
       "format": "<span foreground='#eba0ac'>   </span>{:%d/%m/%Y %H:%M}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
+    
     "network": {
+      "family": "ipv4",
+      "interval": 1,
       "format-wifi": "<span size='13000' foreground='#f9e2af'>  </span>{essid}",
-      "format-ethernet": "<span size='13000' foreground='#f9e2af'>  </span> {ipaddr}",
+      "format-ethernet": "<span size='13000' foreground='#f9e2af'>  </span>{ifname}",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#f9e2af'>  </span>Disconnected",
-      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+      "tooltip-format-ethernet": " {bandwidthDownOctets}   {bandwidthUpOctets}"
     },
-
+    
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-muted": "  0%",
         "format-icons": {
             "default": ["", "", " "]
         },
