@@ -21,6 +21,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - oxygen-cursors
 - wofi
 - fastfetch
+- openrgb
 
 ### Ressources
 
