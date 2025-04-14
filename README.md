@@ -10,7 +10,6 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - hyprpaper
 - kitty
 - starship
-- swaync
 - waybar
 - pavucontrol
 - ttf-cascadia-code-nerd
