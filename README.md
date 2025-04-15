@@ -19,9 +19,11 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - cliphist
 - oxygen-cursors
 - wofi
+
 - fastfetch
 - openrgb
 - cava
+- vscode
 
 ### Ressources
 
