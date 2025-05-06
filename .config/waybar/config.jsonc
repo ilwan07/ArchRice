@@ -1,0 +1,66 @@
+{
+    "position": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "custom/removable", "bluetooth", "clock", "custom/power"],
+    
+    "clock": {
+      "format": "<span foreground='#eba0ac'>  </span>{:%d/%m/%Y  <span foreground='#eba0ac'>󰥔  </span>%H:%M}",
+      "tooltip-format": "<big>{:%H:%M:%S}</big>\n<tt>{calendar}</tt>",
+      "interval": 1
+    },
+    
+    "network": {
+      "family": "ipv4",
+      "interval": 1,
+      "format-wifi": "<span size='13000' foreground='#f9e2af'>  </span>{essid}",
+      "format-ethernet": "<span size='13000' foreground='#f9e2af'>  </span>{ifname}",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": "<span size='13000' foreground='#f9e2af'> </span>Disconnected",
+      "tooltip-format-wifi": "{ipaddr}\nSignal Strenght: {signalStrength}%\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
+      "tooltip-format-ethernet": "{ipaddr}\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}"
+    },
+
+    "custom/removable": {
+      "exec": "~/.config/waybar/scripts/removable.sh",
+      "return-type": "json",
+      "interval": 1,
+      "format": "{text}",
+      "on-click": "~/.config/waybar/scripts/removable-unmount.sh"
+    },
+    
+    "bluetooth": {
+      "format-on": "",
+      "format-off": "󰂲  {status}",
+      "format-disabled": "",
+      "format-connected": "  {device_alias}",
+      "tooltip-format-connected": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "blueman-manager"
+    },
+        
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "  0%",
+        "format-icons": {
+            "default": ["", "", "", " ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "cpu": {
+      "format": "<span foreground='#9fff40'>  </span>{usage}%",
+      "interval": 1
+    },
+    
+    "memory": {
+      "format": "<span foreground='#00ffff'>  </span>{used}Go",
+      "interval": 1
+    },
+    
+    "custom/power": {
+      "format": "⏻",
+      "tooltip-format": "Power menu",
+      "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    }
+  }
