@@ -26,7 +26,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - pavucontrol
 - cliphist
 - fastfetch
-- blueman-manager
+- blueman
 - openrgb
 - vscode
 
