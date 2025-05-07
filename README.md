@@ -19,6 +19,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - wofi
 - udiskie
 - udisks2
+- swaync
 
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
