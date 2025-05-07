@@ -30,6 +30,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - blueman
 - openrgb
 - vscode
+- hyprshot
 
 ### Ressources
 
