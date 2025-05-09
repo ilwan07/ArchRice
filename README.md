@@ -20,6 +20,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - udiskie
 - udisks2
 - swaync
+- xorg-xrdb
 
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
