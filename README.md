@@ -33,6 +33,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - vscode
 - hyprshot
 - [hyprsession](https://github.com/redactedontop/hyprsession)
+- kdeconnect
 
 ### Ressources
 
