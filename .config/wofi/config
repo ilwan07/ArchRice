@@ -1,0 +1,115 @@
+# ~/.config/wofi/config
+#
+# Wofi configuration file
+# For a full list of options, run: man wofi
+# And for styling options: man wofi-colors
+
+# --------------------
+# GENERAL APPEARANCE & BEHAVIOR
+# --------------------
+
+# Mode to show. Common options:
+# drun: application launcher (uses .desktop files)
+# run: executable launcher (searches $PATH)
+# dmenu: reads from stdin, prints to stdout (like dmenu)
+show=drun
+
+# Prompt text displayed in the search bar
+prompt=Search:
+
+# Whether the search should be case sensitive.
+# Setting this to false makes searching case-insensitive.
+case_sensitive=false
+
+# Matching algorithm.
+# normal: substring matching
+# prefix: prefix matching
+# fuzzy: fuzzy matching (often preferred)
+matching=fuzzy
+
+# Number of lines to display
+# lines=10
+
+# Number of columns to display
+# columns=1
+
+# Width of the wofi window. Can be a percentage (e.g., "50%") or pixels (e.g., 600).
+# width=50%
+
+# Height of the wofi window. Only applies if lines is not set or if content exceeds lines.
+# height=40%
+
+# Offset from the edge of the screen
+# xoffset=0
+# yoffset=0
+
+# Which monitor to display on (e.g., 0, 1, or by name like "DP-1")
+# monitor=DP-1
+
+# Allow images (icons) for drun mode
+allow_images=true
+
+# Size of images/icons in pixels
+image_size=24
+
+# Hide scrollbar
+# hide_scroll=false
+
+# Dynamic mode: re-filter results as you type (usually default true for drun)
+# dynamic=true
+
+# Terminal emulator to use for actions requiring a terminal
+# term=alacritty
+
+# Sort order
+# default: order provided by the mode
+# alphabetical: sorts items alphabetically
+# sort_order=default
+
+# --------------------
+# STYLING (Basic - for advanced styling, use a CSS file via the `style` option)
+# --------------------
+# You can define basic colors here if not using style.css.
+# Format: property=foreground background
+# Example:
+# color_win=                 # Window background
+# color_input=               # Input bar background
+# color_text=                # Text color
+# color_prompt=              # Prompt text color
+# color_sel=                 # Selected item background
+# color_sel_text=            # Selected item text color
+# color_borders=             # Border color
+
+# To use a custom stylesheet:
+# style=~/.config/wofi/style.css
+#
+# Example content for style.css:
+# window {
+#     margin: 5px;
+#     border: 2px solid #3498db;
+#     background-color: #2e3440;
+# }
+#
+# input {
+#     margin: 5px;
+#     border: none;
+#     color: #d8dee9;
+#     background-color: #3b4252;
+# }
+#
+# /* ... and so on for #outer-box, #scroll, #text, #entry, #entry:selected */
+
+# --------------------
+# KEYBINDINGS (Examples - default keys are usually fine)
+# --------------------
+# key_up=Up
+# key_down=Down
+# key_enter=Return
+# key_exit=Escape
+# key_pgup=Page_Up
+# key_pgdn=Page_Down
+# key_next_col=Tab
+# key_prev_col=ISO_Left_Tab
+# key_delete_prev_word=Control+w
+# key_delete_next_word=Control+d
+# key_delete_line=Control+u
