@@ -12,7 +12,6 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Custom aliases
-alias pls='sudo'
-alias please='sudo $(fc -ln -1)'  # Execute last command with sudo
+alias pls='sudo $(fc -ln -1)'  # Execute last command with sudo
 alias yayclean='yay -Yc; yay -Sc'
 alias update='sudo pacman -Syyu; yay -Syyu; sudo flatpak update'
