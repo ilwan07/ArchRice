@@ -59,7 +59,7 @@ image_size=24
 # dynamic=true
 
 # Terminal emulator to use for actions requiring a terminal
-# term=alacritty
+term=kitty
 
 # Sort order
 # default: order provided by the mode
