@@ -15,3 +15,7 @@ PS1='[\u@\h \W]\$ '
 alias pls='sudo $(fc -ln -1)'  # Execute last command with sudo
 alias yayclean='yay -Yc; yay -Sc'
 alias update='sudo pacman -Syyu; yay -Syyu; sudo flatpak update'
+
+# terminal-wakatime setup
+export PATH="$HOME/.wakatime:$PATH"
+eval "$(terminal-wakatime init)"
