@@ -34,6 +34,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - hyprshot
 - [hyprsession](https://github.com/redactedontop/hyprsession)
 - kdeconnect
+- [Gapless music player](https://flathub.org/apps/com.github.neithern.g4music)
 
 ### Ressources
 
