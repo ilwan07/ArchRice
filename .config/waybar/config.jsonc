@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "battery", "network", "custom/removable", "bluetooth", "clock", "custom/power"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "battery", "bluetooth", "custom/removable", "network", "clock", "custom/power"],
     
     "clock": {
       "format": "<span foreground='#eba0ac'>  </span>{:%d/%m/%Y  <span foreground='#eba0ac'>󰥔  </span>%H:%M}",
