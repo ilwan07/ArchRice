@@ -21,6 +21,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - udisks2
 - swaync
 - xorg-xrdb
+- brightnessctl
 
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
@@ -36,6 +37,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - kdeconnect
 - [Gapless music player](https://flathub.org/apps/com.github.neithern.g4music)
 - powerkit
+- gnome-calculator
 
 ### Ressources
 
