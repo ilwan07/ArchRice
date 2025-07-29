@@ -12,7 +12,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - starship
 - waybar
 - ttf-cascadia-code-nerd
-- ttf-font-awesome
+- woff2-font-awesome
 - firefox
 - nemo
 - oxygen-cursors
