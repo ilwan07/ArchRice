@@ -14,7 +14,7 @@
       "family": "ipv4",
       "interval": 1,
       "format-wifi": "<span size='13000' foreground='#f9e2af'>  </span>{essid}",
-      "format-ethernet": "<span size='13000' foreground='#f9e2af'>  </span>{ifname}",
+      "format-ethernet": "<span size='13000' foreground='#f9e2af'> </span>{ifname}",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#f9e2af'> </span>Disconnected",
       "tooltip-format-wifi": "{ipaddr}\nSignal Strenght: {signalStrength}%\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
