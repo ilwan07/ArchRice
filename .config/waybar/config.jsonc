@@ -18,7 +18,8 @@
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#f9e2af'> </span>Disconnected",
       "tooltip-format-wifi": "{ipaddr}\nSignal Strenght: {signalStrength}%\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
-      "tooltip-format-ethernet": "{ipaddr}\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}"
+      "tooltip-format-ethernet": "{ipaddr}\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
+      "on-click": "nm-connection-editor"
     },
 
     "custom/removable": {

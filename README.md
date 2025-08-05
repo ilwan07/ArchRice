@@ -22,6 +22,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - swaync
 - xorg-xrdb
 - brightnessctl
+- networkmanager
 
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
