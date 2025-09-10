@@ -39,6 +39,8 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 - [Gapless music player](https://flathub.org/apps/com.github.neithern.g4music)
 - powerkit
 - gnome-calculator
+- iwd
+- iwgtk
 
 ### Ressources
 
