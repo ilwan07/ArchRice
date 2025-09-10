@@ -27,6 +27,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
 - cava
+- nano
 - pavucontrol
 - cliphist
 - fastfetch
