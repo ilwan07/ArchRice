@@ -1,3 +1,9 @@
 set autoindent
+set linenumbers
+set breaklonglines
+set tabsize 4
+set tabstospaces
+set magic
+set mouse
 include /usr/share/nano/*.nanorc
 include /usr/share/nano/extra/*.nanorc
