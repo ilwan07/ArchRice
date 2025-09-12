@@ -4,6 +4,8 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 
 ![Rice Showcase](https://cloud-g3lb4efvp-hack-club-bot.vercel.app/0terminals.png)
 
+You can also check the [Arch Hyprland guide](GUIDE.md).
+
 ### Dependencies
 
 - hyprland
