@@ -380,7 +380,7 @@ alias <shortcut>='<commandToExecute>'
 
 - If you want a more elegant way than grub to boot, you can install and setup refind instead and theme it, install `refind` with `pacman`, then install it with `sudo refind-install`
 
-- Next, install a theme of your choice, you can find some [here](https://github.com/martinmilani/rEFInd-theme-collection), or you can use mine [here](https://github.com/ilwan07/RefindTheme)
+- Next, install a theme of your choice, you can find some [here](https://github.com/martinmilani/rEFInd-theme-collection), or you can use mine [here](https://github.com/ilwan07/ArchRice/tree/main/RefindTheme)
 
 - To further configure the refind menu, edit the config file as root, it is located at `/boot/efi/EFI/refind/refind.conf`
 
