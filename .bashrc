@@ -16,6 +16,7 @@ alias pls='sudo $(fc -ln -1)'  # Execute last command with sudo
 alias yayclean='yay -Yc; yay -Sc'
 alias update='sudo pacman -Syyu; yay -Syu; sudo flatpak update'
 alias connection='sudo nmcli connection'
+alias gdb='gdb --tui'
 
 # terminal-wakatime setup
 export PATH="$HOME/.wakatime:$PATH"
