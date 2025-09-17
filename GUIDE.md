@@ -168,7 +168,7 @@ gvfs-google ark gimp sqlitebrowser nfs-utils gvfs-nfs gvfs-smb dosfstools exfatp
 
 - If you prefer the `update-grub` command shortcut for refreshing grub, then install it with `yay -S update-grub` and you can now run `sudo update-grub` instead
 
-- If dual booting with windows, add it to the menu entries. For this, install modprobe with `sudo pacman -S os-prober then enable os-prober in the grub config file at `/etc/default/grub` so that it automatically detects other systems
+- If dual booting with windows, add it to the menu entries. For this, install modprobe with `sudo pacman -S os-prober` then enable os-prober in the grub config file at `/etc/default/grub` so that it automatically detects other systems
 
 - If you have issues with modprobe or want to manually add the entry, then get the windows EFI partition UUID with `lsblk --fs` and remember the UUID of the windows EFI partition, then edit the custom entries file with `sudo nano /etc/grub.d/40_custom` and add the following at the end (replace `<customName>` with the entry name you want and `<efiPart>` with the UUID you got previously):
 
