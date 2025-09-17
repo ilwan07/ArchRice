@@ -60,7 +60,7 @@ pacstrap -K /mnt base linux linux-firmware nano base-devel <amd-ucode OR intel-u
 pacstrap -K /mnt base linux linux-firmware nano base-devel amd-ucode sof-firmware networkmanager man-db man-pages texinfo bash bluez-libs curl efibootmgr grep grub gzip kitty-terminfo nmap openssh openssl pacman pacman-mirrorlist python python-requests python-urllib3 rsync sqlite sudo systemd tar xz zsh e2fsprogs gvfs gvfs-mtp os-prober fastfetch wget iwd dhcpcd
 ```
 
-- Generate the fstab: `genfstab -U /mnt \> /mnt/etc/fstab`
+- Generate the fstab: `genfstab -U /mnt > /mnt/etc/fstab`
 
 - Enter the install: `arch-chroot /mnt`
 
