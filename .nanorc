@@ -1,6 +1,5 @@
 set autoindent
 set linenumbers
-set breaklonglines
 set tabsize 4
 set tabstospaces
 set magic
