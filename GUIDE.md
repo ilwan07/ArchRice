@@ -224,7 +224,7 @@ wifi.cloned-mac-address = permanent
 
 - You can enable plugins for zsh for various functionalities, you can see a `.zshrc` config file in my repo for example
 
-- To install the zsh inline autocompletion, install the plugin with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` then add `zsh-autosuggestions` in the plugins section of the `.zshrc` file 
+- To install the zsh inline autocompletion, install the plugin with `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions` then add `zsh-autosuggestions` in the plugins section of the `.zshrc` file 
 
 ## Setup hyprland
 
