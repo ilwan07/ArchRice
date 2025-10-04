@@ -218,6 +218,14 @@ wifi.cloned-mac-address = permanent
 
 - Then restart the service with `sudo systemctl restart NetworkManager`
 
+- To use zsh instead of the default bash, install the `zsh` and `zsh-completions` packages using pacman, then execute `zsh` in the terminal and follow the configuration assistant, you might also want to move some configurations from your `.bashrc` to `.zshrc` if you made some changes yourself, such as the starship launch command (replace bash with zsh) or your aliases
+
+- To permanently change to zsh, run `chsh -s /bin/zsh` (and eventually `sudo chsh -s /bin/zsh` to make the root user have zsh too)
+
+- You can enable plugins for zsh for various functionalities, you can see a `.zshrc` config file in my repo for example
+
+- To install the zsh inline autocompletion, install the plugin with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` then add `zsh-autosuggestions` in the plugins section of the `.zshrc` file 
+
 ## Setup hyprland
 
 - First, install kitty with `pacman` if it's not already installed
