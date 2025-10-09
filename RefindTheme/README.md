@@ -2,7 +2,7 @@
 
 A mix of rEFInd themes to make my own one
 
-![Screenshot of the rEFInd screen](https://github.com/ilwan07/RefindTheme/blob/main/screenshots/screenshot.png)
+![Screenshot of the rEFInd screen](https://github.com/ilwan07/ArchRice/blob/main/RefindTheme/screenshots/screenshot.png)
 
 How to install:
 
