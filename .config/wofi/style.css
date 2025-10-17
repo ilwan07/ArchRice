@@ -117,6 +117,10 @@ window {
   color: @text;
 }
 
+#img {
+  margin-left: 6px;
+}
+
 #entry {
   background-color: @base;
   border-radius: 8px;
