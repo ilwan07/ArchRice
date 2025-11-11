@@ -141,7 +141,7 @@ EnableNetworkConfiguration=true
 of course don't install all of these but only what you need (do some research on what those packages are if in doubt):
 
 ```bash
-sudo pacman -S kitty firefox nemo git elinks wine pavucontrol pulseaudio pulseaudio-bluetooth pulseaudio-jack ntfs-3g pass gnome-keyring seahorse qt5-wayland vlc sxiv nvim kate udisks2 python-pip tk gtk4-layer-shell fzf network-manager-applet gnome-calculator arduino-ide kdeconnect libratbag piper vi 7zip inkscape gvfs-goa gvfs-google ark gimp sqlitebrowser nfs-utils gvfs-nfs gvfs-smb dosfstools exfatprogs micro linux-headers inkscape gdb
+sudo pacman -S kitty firefox nemo git elinks wine pavucontrol pulseaudio pulseaudio-bluetooth pulseaudio-jack ntfs-3g pass gnome-keyring seahorse qt5-wayland vlc sxiv nvim kate udisks2 python-pip tk gtk4-layer-shell fzf network-manager-applet gnome-calculator arduino-ide kdeconnect libratbag piper vi 7zip inkscape gvfs-goa gvfs-google ark gimp sqlitebrowser nfs-utils gvfs-nfs gvfs-smb dosfstools exfatprogs micro linux-headers gdb
 ```
 
 - Enable the audio service after login with `systemctl --user enable pulseaudio`
