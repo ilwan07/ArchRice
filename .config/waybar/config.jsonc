@@ -67,7 +67,8 @@
     },
     
     "memory": {
-      "format": "<span foreground='#00ffff'>   </span>{used}Go",
+      "format": "<span foreground='#00ffff'>   </span>{used:2.1f}GiB",
+      "tooltip-format": "{percentage}% used\n{swapUsed}GiB swap",
       "interval": 1
     }
   }
