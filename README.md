@@ -2,7 +2,9 @@
 
 My dotfiles for ArchLinux ricing with the Hyprland WM
 
-![Rice Showcase](https://cloud-g3lb4efvp-hack-club-bot.vercel.app/0terminals.png)
+![Rice Showcase Terminals](https://github.com/ilwan07/ArchRice/blob/main/screenshots/terminals.png)
+
+![Rice Showcase windows](https://github.com/ilwan07/ArchRice/blob/main/screenshots/windows.png)
 
 You can also check the [Arch Hyprland guide](GUIDE.md).
 
