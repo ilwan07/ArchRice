@@ -113,6 +113,7 @@ alias pkgclean='sudo paccache -rk 0; yay -Yc; yay -Sc --noconfirm'
 alias update='sudo pacman -Syyu; yay -Syu; sudo flatpak update'
 alias connection='sudo nmcli connection'
 alias gdb='gdb --tui'
+alias padunlock='hyprctl keyword input:touchpad:disable_while_typing no'  # mainly for games: don't block keyboard when using trackpad
 
 # Commands history
 HISTFILE=~/.histfile

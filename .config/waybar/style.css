@@ -65,7 +65,6 @@ button:hover {
 #network,
 #bluetooth,
 #custom-removable,
-#custom-power,
 #mode,
 #scratchpad {
   margin-top: 2px;
@@ -90,7 +89,6 @@ button:hover {
 #network:hover,
 #bluetooth:hover,
 #custom-removable:hover,
-#custom-power:hover,
 #mode:hover,
 #scratchpad:hover {
   border-width: 4px;
@@ -125,12 +123,6 @@ button:hover {
 #custom-removable {
     color: #add8e6;
     border-bottom: 2px solid #add8e6;
-}
-
-#custom-power {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding-right: 8px;
 }
 
 #cpu {
