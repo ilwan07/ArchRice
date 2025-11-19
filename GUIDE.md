@@ -34,19 +34,21 @@
 
 - Note that for this install, I assume that your computer uses UEFI, which is the case on almost every somewhat recent computer, if you're still on legacy BIOS then refer to the arch wiki at [https://wiki.archlinux.org/title/Installation_guide](https://wiki.archlinux.org/title/Installation_guide) section 1.9 for detailed instructions
 
+- IMPORTANT: if you're dual booting and have another OS (such as Windows), skip the creation and formatting of the EFI boot partition, as it already exists, but then mount the already present EFI boot partition when the guides tells you to
+
 - Use `cfdisk /dev/<diskName>` using the physical disk on which you want to install arch linux, and create 3 partitions: one for the boot, around 1Gb, one for the swap, for example 8Gb (optional but strongly recommended, you can later create a swap file instead), and the main one, what's left
 
 - If you don't want to create a swap partition, you can make a swap file later on
 
-- Format partitions:
-Main part: `mkfs.ext4 /dev/<mainPart>`
-Boot part: `mkfs.fat -F 32 /dev/<bootPart>`
-Swap part: `mkswap /dev/<swapPart>`
+- Format partitions:  
+Main part: `mkfs.ext4 /dev/<mainPart>`  
+EFI Boot part: `mkfs.fat -F 32 /dev/<bootPart>`  
+Swap part: `mkswap /dev/<swapPart>`  
 
-- Mount partitions:
-Main: `mount /dev/<mainPart> /mnt`
-Boot: `mount --mkdir /dev/<bootPart> /mnt/boot/efi`
-Swap: `swapon /dev/<swapPart>`
+- Mount partitions:  
+Main: `mount /dev/<mainPart> /mnt`  
+EFI Boot: `mount --mkdir /dev/<bootPart> /mnt/boot/efi`  
+Swap: `swapon /dev/<swapPart>`  
 
 - Install basic packages with pacstrap, here is what I think is the minimal install:
 
