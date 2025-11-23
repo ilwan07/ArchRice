@@ -156,6 +156,8 @@ sudo pacman -S kitty firefox nemo git elinks wine pavucontrol pulseaudio pulseau
 
 - We can now install vscode for example with `yay -S visual-studio-code-bin`
 
+- To enable bluetooth autoconnect for paired and trusted devices, install the package with `yay -S bluetooth-autoconnect` then enable the global service with `sudo systemctl enable --now bluetooth-autoconnect` and the sound user service with `systemctl --user enable --now pulseaudio-bluetooth-autoconnect`
+
 - Setup flatpak with `sudo pacman -S flatpak`
 
 - Install a firewall with `sudo pacman -S ufw` then enable it with `sudo systemctl enable --now ufw` then `sudo ufw enable`
