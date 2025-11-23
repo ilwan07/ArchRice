@@ -32,6 +32,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - sxiv
 - cava
 - nano
+- kwrite
 - pavucontrol
 - cliphist
 - fastfetch
@@ -39,9 +40,8 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - openrgb
 - vscode
 - hyprshot
-- [hyprsession](https://github.com/redactedontop/hyprsession)
 - kdeconnect
-- [Gapless music player](https://flathub.org/apps/com.github.neithern.g4music)
+- gapless music player
 - powerkit
 - gnome-calculator
 - iwd
