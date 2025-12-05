@@ -46,6 +46,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - gnome-calculator
 - iwd
 - iwgtk
+- smile
 
 ### Ressources
 
