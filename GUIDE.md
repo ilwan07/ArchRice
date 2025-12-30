@@ -294,7 +294,7 @@ env = QT_QPA_PLATFORMTHEME,qt6ct
 
 ```toml
 [initial_session]
-command = "Hyprland"
+command = "start-hyprland"
 user = "<yourUsername>"
 ```
 
