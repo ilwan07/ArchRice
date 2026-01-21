@@ -317,6 +317,8 @@ session include login
 session optional pam_gnome_keyring.so auto_start
 ```
 
+- To provide an authentication method for some apps, install `hyprpolkitagent` and use the config file to execute once this binary on hyprland startup: `/usr/lib/hyprpolkitagent/hyprpolkitagent`
+
 ## Customize the interface
 
 - You can customize a lot of things in hyprland. If you don't know where to start, have a look at [my repo](https://github.com/ilwan07/ArchRice), you need to install all the dependencies and copy the config files in your user directory

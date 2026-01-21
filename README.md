@@ -27,6 +27,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - xorg-xrdb
 - brightnessctl
 - networkmanager
+- hyprpolkitagent
 
 ### Optional dependencies (used in the config but not absolutely needed)
 - sxiv
