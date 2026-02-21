@@ -148,6 +148,8 @@ sudo pacman -S kitty firefox nemo git elinks wine pavucontrol pulseaudio pulseau
 
 - Enable the audio service after login with `systemctl --user enable pulseaudio`
 
+- To slightly improve the audio quality, especially for earbuds, follow [this guide](https://medium.com/@gamunu/enable-high-quality-audio-on-linux-6f16f3fe7e1f)
+
 - For bluetooth support, install it with `sudo pacman -S bluez blueman bluez-utils` then enable it with `sudo modprobe btusb` then `sudo systemctl enable --now bluetooth`
 
 - Setup java with `sudo pacman -S jdk-openjdk`
