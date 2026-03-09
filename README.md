@@ -48,6 +48,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - iwd
 - iwgtk
 - smile
+- python-wxpython
 
 ### Ressources
 
