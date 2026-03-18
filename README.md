@@ -19,7 +19,6 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - woff2-font-awesome
 - firefox
 - nemo
-- oxygen-cursors
 - wofi
 - udiskie
 - udisks2
@@ -30,8 +29,10 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - hyprpolkitagent
 
 ### Optional dependencies (used in the config but not absolutely needed)
+
 - sxiv
 - cava
+- oxygen-cursors
 - nano
 - kwrite
 - pavucontrol
@@ -42,7 +43,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - vscode
 - hyprshot
 - kdeconnect
-- gapless music player
+- gapless music player (g4player)
 - powerkit
 - gnome-calculator
 - iwd
