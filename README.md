@@ -8,6 +8,8 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 
 You can also check the [Arch Hyprland guide](GUIDE.md).
 
+Includes a Hyprpaper wallpaper changer script in `.config/hypr/scripts/choose-wallpaper.py`
+
 ### Dependencies
 
 - hyprland
@@ -49,6 +51,7 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 - iwd
 - iwgtk
 - smile
+- python
 - python-wxpython
 
 ### Ressources

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Choose Wallpaper
+Exec=python /home/ilwan/.config/hypr/scripts/choose-wallpaper.py -m cover -f %u
+Terminal=false
+Type=Application
+Icon=/home/ilwan/.local/share/icons/hicolor/96x96/apps/choose-wallpaper.png
+Categories=Utility;
+NoDisplay=true
