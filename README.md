@@ -12,7 +12,7 @@ Includes a Hyprpaper wallpaper changer script in `.config/hypr/scripts/choose-wa
 
 ### Dependencies
 
-- hyprland
+- hyprland (both .conf and .lua configs in the repo)
 - hyprpaper
 - kitty
 - starship
