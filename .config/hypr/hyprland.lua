@@ -279,6 +279,10 @@ hl.bind(mainMod .. " + O",         hl.dsp.exec_cmd(code))
 hl.bind(mainMod .. " + K",         hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + G",         hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-g4music" || kitty --class "cava-g4music" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava" & g4music; hyprctl dispatch "hl.dsp.window.kill({window='class:cava-g4music'})"]]))
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-free" && hyprctl dispatch "hl.dsp.window.kill({window='class:cava-free'})" || kitty --class "cava-free" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava"]]))
+hl.bind(mainMod .. " + Y",         hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-up.sh && notify-send 'Home VPN Up' || notify-send 'Error: Failed to get Home VPN Up'"))
+hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-down.sh && notify-send 'Home VPN Down' || notify-send 'Home VPN already Down'"))
+hl.bind(mainMod .. " + SHIFT + CTRL + B", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/restart-bluetooth.sh"))
+hl.bind(mainMod .. " + SHIFT + CTRL + W", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/restart-network.sh"))
 hl.bind(mainMod .. " + P",         hl.dsp.window.pin())
 hl.bind(mainMod .. " + T",         hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.layout("swapsplit"))
@@ -324,12 +328,16 @@ hl.bind(mainMod .. " + SHIFT + ccedilla",   function() move_cmd(9)  end)
 hl.bind(mainMod .. " + SHIFT + agrave",     function() move_cmd(10) end)
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + twosuperior",         hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind(mainMod .. " + twosuperior", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind(mainMod .. " + SHIFT + twosuperior", function() move_cmd("special:scratchpad") end)
 
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+-- Scroll through existing workspaces with mainMod + scroll/arrow/tab
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + mouse_down",   hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + left",   hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + tab", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + SHIFT + tab",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",         hl.dsp.window.drag(),   { mouse = true })

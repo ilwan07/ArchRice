@@ -10,6 +10,8 @@ You can also check the [Arch Hyprland guide](GUIDE.md).
 
 Includes a Hyprpaper wallpaper changer script in `.config/hypr/scripts/choose-wallpaper.py`
 
+WARNING: for the script files requiring sudo, make sure they're owned by root and deny write access to other users, and then use visudo to allow these scripts to be executed without password prompt
+
 ### Dependencies
 
 - hyprland (both .conf and .lua configs in the repo)
