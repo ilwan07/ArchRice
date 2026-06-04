@@ -279,8 +279,8 @@ hl.bind(mainMod .. " + O",         hl.dsp.exec_cmd(code))
 hl.bind(mainMod .. " + K",         hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + G",         hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-g4music" || kitty --class "cava-g4music" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava" & g4music; hyprctl dispatch "hl.dsp.window.kill({window='class:cava-g4music'})"]]))
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-free" && hyprctl dispatch "hl.dsp.window.kill({window='class:cava-free'})" || kitty --class "cava-free" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava"]]))
-hl.bind(mainMod .. " + Y",         hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-up.sh && notify-send 'Home VPN Up' || notify-send 'Error: Failed to get Home VPN Up'"))
-hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-down.sh && notify-send 'Home VPN Down' || notify-send 'Home VPN already Down'"))
+hl.bind(mainMod .. " + Y",         hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-up.sh && hyprctl notify 5 5000 0 fontsize:16 'Home VPN Up' || hyprctl notify 3 5000 0 fontsize:16 'Error: Failed to get Home VPN Up'"))
+hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-down.sh && hyprctl notify 5 5000 0 fontsize:16 'Home VPN Down' || hyprctl notify 1 5000 0 fontsize:16 'Home VPN already Down'"))
 hl.bind(mainMod .. " + SHIFT + CTRL + B", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/restart-bluetooth.sh"))
 hl.bind(mainMod .. " + SHIFT + CTRL + W", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/restart-network.sh"))
 hl.bind(mainMod .. " + P",         hl.dsp.window.pin())
@@ -348,8 +348,8 @@ hl.bind("XF86AudioRaiseVolume",  hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT
 hl.bind("XF86AudioLowerVolume",  hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -5%"),                                             { locked = true, repeating = true })
 hl.bind("XF86AudioMute",         hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"),                                            { locked = true, repeating = true })
 hl.bind("XF86AudioMicMute",      hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),                                         { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl s 5%+ && hyprctl dismissnotify -1 && hyprctl notify 2 2000 0 \"brightness $(brightnessctl g | awk -v max=$(brightnessctl m) 'BEGIN{} {printf \"%.0f%%\", ($1/max)*100}')\""), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 5%- && hyprctl dismissnotify -1 && hyprctl notify 2 2000 0 \"brightness $(brightnessctl g | awk -v max=$(brightnessctl m) 'BEGIN{} {printf \"%.0f%%\", ($1/max)*100}')\""), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl s 5%+ && hyprctl dismissnotify -1 && hyprctl notify 2 2000 0 fontsize:16 \"brightness $(brightnessctl g | awk -v max=$(brightnessctl m) 'BEGIN{} {printf \"%.0f%%\", ($1/max)*100}')\""), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 5%- && hyprctl dismissnotify -1 && hyprctl notify 2 2000 0 fontsize:16 \"brightness $(brightnessctl g | awk -v max=$(brightnessctl m) 'BEGIN{} {printf \"%.0f%%\", ($1/max)*100}')\""), { locked = true, repeating = true })
 
 -- Requires playerctl
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),        { locked = true })
@@ -430,5 +430,5 @@ hl.window_rule({
     opacity          = 2,  -- bypass inactive/active opacity multipliers
     float            = true,
     size             = { 390, 320 },
-    move             = { 1022, 274 },
+    move             = { 1016, 261 },
 })
