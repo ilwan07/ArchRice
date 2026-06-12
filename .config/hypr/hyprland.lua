@@ -61,16 +61,15 @@ hl.exec_cmd('gsettings set org.gnome.desktop.interface cursor-theme "Oxygen_Whit
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 hl.env("XCURSOR_THEME", "Oxygen_White")
 hl.env("XCURSOR_SIZE",  "24")
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_QPA_PLATFORM",      "wayland")
 hl.env("HYPRSHOT_DIR",         "Pictures/Screenshots")
-
--- auto-update ohmyzsh without prompting
-hl.env("DISABLE_UPDATE_PROMPT", "true")
-
 
 -- #####################
 -- ### LOOK AND FEEL ###
@@ -244,16 +243,7 @@ hl.device({
 -- See https://wiki.hypr.land/Configuring/Basics/Binds/
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
--- Move a window to the specified workspace, and also do some other stuff (makes cava visualizer follow g4music)
-local function move_cmd(ws)
-    local w = hl.get_active_window()
-    if w ~= nil and w.class == "com.github.neithern.g4music" then
-        hl.dispatch(hl.dsp.window.move({ workspace = ws, window = "class:cava-g4music", silent = true }))
-    end
-    hl.dispatch(hl.dsp.window.move({ workspace = ws }))
-end
-
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+-- Key binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + return",    hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + less",      hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C",         hl.dsp.window.close())
@@ -287,8 +277,6 @@ hl.bind(mainMod .. " + P",         hl.dsp.window.pin())
 hl.bind(mainMod .. " + T",         hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.layout("swapsplit"))
 hl.bind(mainMod .. " + F11",       hl.dsp.window.fullscreen())
-
--- Utilities
 hl.bind("PRINT",                   hl.dsp.exec_cmd("hyprshot -m output -m active"))
 hl.bind(mainMod .. " + PRINT",     hl.dsp.exec_cmd("hyprshot -m window -m active"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
@@ -303,31 +291,25 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "r" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "u" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "d" }))
 
--- Switch workspaces with mainMod + [0-9] (French AZERTY bindings)
-hl.bind(mainMod .. " + ampersand",  hl.dsp.focus({ workspace = 1  }))
-hl.bind(mainMod .. " + eacute",     hl.dsp.focus({ workspace = 2  }))
-hl.bind(mainMod .. " + quotedbl",   hl.dsp.focus({ workspace = 3  }))
-hl.bind(mainMod .. " + apostrophe", hl.dsp.focus({ workspace = 4  }))
-hl.bind(mainMod .. " + parenleft",  hl.dsp.focus({ workspace = 5  }))
-hl.bind(mainMod .. " + minus",      hl.dsp.focus({ workspace = 6  }))
-hl.bind(mainMod .. " + egrave",     hl.dsp.focus({ workspace = 7  }))
-hl.bind(mainMod .. " + underscore", hl.dsp.focus({ workspace = 8  }))
-hl.bind(mainMod .. " + ccedilla",   hl.dsp.focus({ workspace = 9  }))
-hl.bind(mainMod .. " + agrave",     hl.dsp.focus({ workspace = 10 }))
+-- Move a window to the specified workspace, and also do some other stuff (makes cava visualizer follow g4music)
+local function move_cmd(ws)
+    local w = hl.get_active_window()
+    if w ~= nil and w.class == "com.github.neithern.g4music" then
+        hl.dispatch(hl.dsp.window.move({ workspace = ws, window = "class:cava-g4music", silent = true }))
+    end
+    hl.dispatch(hl.dsp.window.move({ workspace = ws }))
+end
 
--- Move active window to a workspace with mainMod + SHIFT + [0-9] (French AZERTY bindings) + execute command on move
-hl.bind(mainMod .. " + SHIFT + ampersand",  function() move_cmd(1)  end)
-hl.bind(mainMod .. " + SHIFT + eacute",     function() move_cmd(2)  end)
-hl.bind(mainMod .. " + SHIFT + quotedbl",   function() move_cmd(3)  end)
-hl.bind(mainMod .. " + SHIFT + apostrophe", function() move_cmd(4)  end)
-hl.bind(mainMod .. " + SHIFT + parenleft",  function() move_cmd(5)  end)
-hl.bind(mainMod .. " + SHIFT + minus",      function() move_cmd(6)  end)
-hl.bind(mainMod .. " + SHIFT + egrave",     function() move_cmd(7)  end)
-hl.bind(mainMod .. " + SHIFT + underscore", function() move_cmd(8)  end)
-hl.bind(mainMod .. " + SHIFT + ccedilla",   function() move_cmd(9)  end)
-hl.bind(mainMod .. " + SHIFT + agrave",     function() move_cmd(10) end)
+-- AZERTY bindings
+local work_keys = { "ampersand", "eacute", "quotedbl", "apostrophe", "parenleft", "minus", "egrave", "underscore", "ccedilla", "agrave", "parenright", "equal" }
+-- Switch workspaces / move to workspaces
+for i = 1, #work_keys do
+    local key = work_keys[i]
+    hl.bind(mainMod .. " + " .. key,         hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. key, function() move_cmd(i) end)
+end
 
--- Example special workspace (scratchpad)
+-- Special workspace (scratchpad)
 hl.bind(mainMod .. " + twosuperior", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind(mainMod .. " + SHIFT + twosuperior", function() move_cmd("special:scratchpad") end)
 
