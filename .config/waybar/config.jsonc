@@ -68,7 +68,7 @@
     
     "memory": {
       "format": "<span foreground='#00ffff'>   </span>{used:2.1f}GiB",
-      "tooltip-format": "{percentage}% used\n{swapUsed}GiB swap",
+      "tooltip-format": "{percentage}% used\n{swapUsed:2.2f}GiB swap",
       "interval": 1
     }
   }
