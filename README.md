@@ -8,7 +8,7 @@ My dotfiles for ArchLinux ricing with the Hyprland WM
 
 You can also check the [Arch Hyprland guide](GUIDE.md).
 
-Includes a Hyprpaper wallpaper changer script in `.config/hypr/scripts/choose-wallpaper.py`
+Includes scripts and systemd services for some utilities
 
 WARNING: for the script files requiring sudo, make sure they're owned by root and deny write access to other users, and then use visudo to allow these scripts to be executed without password prompt
 
@@ -31,6 +31,8 @@ WARNING: for the script files requiring sudo, make sure they're owned by root an
 - brightnessctl
 - networkmanager
 - hyprpolkitagent
+- systemd
+- pipewire
 
 ### Optional dependencies (used in the config but not absolutely needed)
 

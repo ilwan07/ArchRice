@@ -108,10 +108,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias pls='sudo $(fc -ln -1)'  # Execute last command with sudo
-alias pkgclean='sudo paccache -rk 0; yay -Yc; yay -Sc --noconfirm'
-alias update='sudo pacman -Syyu; yay -Syu; sudo flatpak update'
-alias connection='sudo nmcli connection'
+alias please'sudo $(fc -ln -1)'  # Execute last command with sudo
+alias pkgclean='sudo rm -rf /var/cache/pacman/pkg/*; sudo rm -rf ~/.cache/yay/*; sudo paccache -rk 0; sudo yay -Yc; sudo yay -Scc --noconfirm'
+alias update='sudo pacman -Syu; yay -Syu; sudo flatpak update; omz update'
 alias gdb='gdb --tui'
 
 # Commands history

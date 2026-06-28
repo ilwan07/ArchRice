@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto-fix JBL Tune Beam 2 falling back to HFP instead of A2DP
+After=wireplumber.service
+
+[Service]
+ExecStart=%h/.local/bin/fix-bt-watcher.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

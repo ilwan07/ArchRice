@@ -109,7 +109,7 @@ button:hover {
     border-bottom: 2px solid #eba0ac;
 }
 
-#pulseaudio {
+#wireplumber {
     color: #89b4fa;
     border-bottom: 2px solid #89b4fa;
 }
@@ -162,11 +162,4 @@ button:hover {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right>widget:last-child>#workspaces {
     margin-right: 0;
-}
-
-#custom-vpn {
-    color: #b4befe;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
 }

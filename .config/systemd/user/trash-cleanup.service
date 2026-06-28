@@ -1,0 +1,6 @@
+[Unit]
+Description=Clean up trash items older than 14 days
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/trash-cleanup.sh

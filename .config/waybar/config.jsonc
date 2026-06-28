@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "battery", "bluetooth", "custom/removable", "network", "clock"],
+    "modules-right": ["cpu", "memory", "wireplumber", "battery", "bluetooth", "custom/removable", "network", "clock"],
     
     "clock": {
       "format": "<span foreground='#eba0ac'>  </span>{:%d/%m/%Y  <span foreground='#eba0ac'>󰥔  </span>%H:%M}",
@@ -12,12 +12,12 @@
     
     "network": {
       "family": "ipv4",
-      "interval": 1,
+      "interval": 2,
       "format-wifi": "<span size='13000' foreground='#f9e2af'>  </span>{essid}",
       "format-ethernet": "<span size='13000' foreground='#f9e2af'> </span>{ifname}",
-      "format-linked": "{ifname} (No IP) ",
+      "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "<span size='13000' foreground='#f9e2af'> </span>Disconnected",
-      "tooltip-format-wifi": "{ipaddr}\nSignal Strenght: {signalStrength}%\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
+      "tooltip-format-wifi": "{ipaddr}\nSignal Strenght: {signalStrength}%\n  {bandwidthDownBytes}\t  {bandwidthUpBytes}",
       "tooltip-format-ethernet": "{ipaddr}\n  {bandwidthDownOctets}\t  {bandwidthUpOctets}",
       "on-click": "iwgtk"
     },
@@ -25,7 +25,7 @@
     "custom/removable": {
       "exec": "~/.config/waybar/scripts/removable.sh",
       "return-type": "json",
-      "interval": 1,
+      "interval": 2,
       "format": "{text}",
       "on-click": "~/.config/waybar/scripts/removable-unmount.sh"
     },
@@ -40,25 +40,24 @@
       "on-click": "blueman-manager"
     },
         
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon}  {volume}%",
-        "format-muted": "   0%",
+        "format-muted": " ",
         "format-icons": {
-            "default": ["", "", "", " ", " ", " "]
+            "default": ["", "", "", " ", " ", " ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
     
     "battery": {
-        "interval": 1,
+        "interval": 2,
         "states": {
              "warning": 30,
              "critical": 20
         },
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
-        "format-icons": ["! 󰁺", "! 󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-click": "powerkit --config"
+        "format-icons": ["! 󰁺", "! 󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     
     "cpu": {
