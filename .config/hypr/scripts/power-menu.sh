@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # 1) Define the menu order explicitly
-MENU_ORDER=(Shutdown Reboot Lock)
+MENU_ORDER=(Shutdown Reboot Hibernate Lock)
 
 # 2) Map each item to its command
 declare -A ACTIONS=(
   [Shutdown]="poweroff"
   [Reboot]="reboot"
+  [Hibernate]="systemctl hibernate; hyprlock"
   [Lock]="hyprlock"
 )
 
@@ -18,4 +19,4 @@ choice=$(printf '%s\n' "${MENU_ORDER[@]}" \
 [ -z "$choice" ] && exit 0
 
 # 5) Execute the corresponding command
-${ACTIONS[$choice]}
+eval "${ACTIONS[$choice]}"

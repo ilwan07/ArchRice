@@ -232,7 +232,7 @@ wifi.cloned-mac-address = permanent
 
 - To install the zsh inline autocompletion, install the plugin with `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions` then add `zsh-autosuggestions` in the plugins section of the `.zshrc` file 
 
-- The repo contains some systemd services in `.config/systemd/user/` you'll maybe want to enable with `systemctl --user enable --now <service-name>`, they also require the scripts in `.local/bin/`, which should be allowed to be executed with chmod if needed
+- The repo contains some systemd services in `.config/systemd/user/` you'll maybe want to enable with `systemctl --user enable --now <service-name>`, they also require the scripts in `.local/bin/`, which should be allowed to be executed with chmod if needed. For the battery warning service, make sure to first disable the critical battery action in `/etc/UPower/UPower.conf`
 
 ## Setup hyprland
 

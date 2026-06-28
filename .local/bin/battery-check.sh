@@ -23,24 +23,32 @@ battery_status=$(echo "$battery_info" | grep -oP 'Battery \d+: \K\w+')
 RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 FLAG_20="$RUNTIME_DIR/battery_notified_20"
 FLAG_5="$RUNTIME_DIR/battery_notified_5"
-FLAG_2="$RUNTIME_DIR/battery_notified_2"
+FLAG_1="$RUNTIME_DIR/battery_notified_1"
 
 # Clear flags as battery recovers above thresholds (e.g. after plugging in)
 if [ "$battery_level" -gt 20 ]; then
-    rm -f "$FLAG_20" "$FLAG_5" "$FLAG_2"
+    rm -f "$FLAG_20" "$FLAG_5" "$FLAG_1"
 elif [ "$battery_level" -gt 5 ]; then
-    rm -f "$FLAG_5" "$FLAG_2"
-elif [ "$battery_level" -gt 2 ]; then
-    rm -f "$FLAG_2"
+    rm -f "$FLAG_5" "$FLAG_1"
+elif [ "$battery_level" -gt 1 ]; then
+    rm -f "$FLAG_1"
 fi
 
 # Check thresholds, most critical first
-if [ "$battery_level" -le 2 ]; then
-    if [ ! -f "$FLAG_2" ]; then
-        hyprctl notify 3 10000 0 fontsize:16 "WARNING: Battery critical! Suspending in 10 seconds..."
-        touch "$FLAG_2"
-        sleep 10
-        systemctl suspend
+if [ "$battery_level" -le 1 ]; then
+    if [ ! -f "$FLAG_1" ]; then
+        hyprctl notify 3 30000 0 fontsize:16 "WARNING: Battery critical! Hibernating in 30 seconds..."
+        touch "$FLAG_1"
+        sleep 30
+        # Re-check status after the delay: cancel if plugged in
+        current_status=$(acpi -b 2>/dev/null | head -n1 | grep -oP 'Battery \d+: \K\w+')
+        if [ "$current_status" != "Discharging" ]; then
+            rm -f "$FLAG_1"
+            hyprctl notify 1 5000 0 fontsize:16 "Hibernation cancelled: power connected."
+        else
+            systemctl hibernate
+            hyprlock
+        fi
     fi
 
 elif [ "$battery_level" -le 5 ]; then
