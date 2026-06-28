@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodically check battery level
+Requires=battery-check.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target
