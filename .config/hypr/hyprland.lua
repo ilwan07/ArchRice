@@ -295,9 +295,11 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "d" }))
 local function move_cmd(ws)
     local w = hl.get_active_window()
     if w ~= nil and w.class == "com.github.neithern.g4music" then
+        hl.dispatch(hl.dsp.window.move({ workspace = ws }))
         hl.dispatch(hl.dsp.window.move({ workspace = ws, window = "class:cava-g4music", silent = true }))
+    else
+        hl.dispatch(hl.dsp.window.move({ workspace = ws }))
     end
-    hl.dispatch(hl.dsp.window.move({ workspace = ws }))
 end
 
 -- AZERTY bindings
