@@ -315,11 +315,9 @@ end
 hl.bind(mainMod .. " + twosuperior", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind(mainMod .. " + SHIFT + twosuperior", function() move_cmd("special:scratchpad") end)
 
--- Scroll through existing workspaces with mainMod + scroll/arrow/tab
+-- Scroll through existing workspaces with mainMod + scroll/tab
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_down",   hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + left",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + SHIFT + tab",   hl.dsp.focus({ workspace = "e-1" }))
 
