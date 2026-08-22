@@ -30,7 +30,7 @@ WARNING: for the script files requiring sudo, make sure they're owned by root an
 - xorg-xrdb
 - brightnessctl
 - networkmanager
-- hyprpolkitagent
+- polkit-gnome
 - systemd
 - pipewire
 
@@ -57,6 +57,7 @@ WARNING: for the script files requiring sudo, make sure they're owned by root an
 - smile
 - python
 - python-wxpython
+- input-remapper
 
 ### Ressources
 

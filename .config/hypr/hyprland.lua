@@ -43,7 +43,7 @@ local menu = "pidof wofi && killall wofi || wofi --show drun --insensitive"
 
 -- execution of utilities
 hl.on("hyprland.start", function()
-    hl.exec_cmd([[(hyprlock && sleep 0.2 && hyprctl reload) & hyprpaper & pulseaudio & swaync & waybar & wl-paste --watch cliphist store & udiskie --no-notify & /usr/lib/hyprpolkitagent/hyprpolkitagent]])
+    hl.exec_cmd([[(hyprlock && sleep 0.2 && hyprctl reload) & hyprpaper & pulseaudio & swaync & waybar & wl-paste --watch cliphist store & udiskie --no-notify & /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & input-remapper-control --command autoload]])
     hl.exec_cmd([[sh -c "sleep 2 && hyprctl hyprpaper wallpaper ', /home/ilwan/.config/wallpapers/wallpaper.jpg, cover'"]])
     -- execution of config commands
     hl.exec_cmd("xrdb ~/.Xresources")
