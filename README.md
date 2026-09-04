@@ -58,6 +58,7 @@ WARNING: for the script files requiring sudo, make sure they're owned by root an
 - python
 - python-wxpython
 - input-remapper
+- hyprpicker
 
 ### Ressources
 
