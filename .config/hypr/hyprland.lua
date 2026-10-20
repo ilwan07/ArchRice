@@ -268,7 +268,7 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd(browser .. " -private-window"
 hl.bind(mainMod .. " + O",         hl.dsp.exec_cmd(code))
 hl.bind(mainMod .. " + K",         hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + G",         hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-g4music" || kitty --class "cava-g4music" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava" & g4music; hyprctl dispatch "hl.dsp.window.kill({window='class:cava-g4music'})"]]))
-hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-free" && hyprctl dispatch "hl.dsp.window.kill({window='class:cava-free'})" || kitty --class "cava-free" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava"]]))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd([[hyprctl clients | grep "class: cava-bottom" && hyprctl dispatch "hl.dsp.window.kill({window='class:cava-bottom'})" || kitty --class "cava-bottom" -o confirm_os_window_close=0 -o background_opacity=0 -e "cava"]]))
 hl.bind(mainMod .. " + Y",         hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-up.sh && hyprctl notify 5 5000 0 fontsize:16 'Home VPN Up' || hyprctl notify 3 5000 0 fontsize:16 'Error: Failed to get Home VPN Up'"))
 hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/homevpn-down.sh && hyprctl notify 5 5000 0 fontsize:16 'Home VPN Down' || hyprctl notify 1 5000 0 fontsize:16 'Home VPN already Down'"))
 hl.bind(mainMod .. " + SHIFT + CTRL + B", hl.dsp.exec_cmd("sudo ~/.config/hypr/scripts/restart-bluetooth.sh"))
@@ -400,18 +400,20 @@ hl.window_rule({
     move             = { 1123, 315 },
 })
 
--- Free use cava visualizer
+-- Bottom cava visualizer
 hl.window_rule({
-    name             = "cava-free",
-    match            = {class = "cava-free"},
+    name             = "cava-bottom",
+    match            = {class = "cava-bottom"},
     no_blur          = true,
     no_shadow        = true,
     no_dim           = true,
     border_size      = 0,
     rounding         = 0,
     no_initial_focus = true,
+    no_focus         = true,
+    pin              = true,
     opacity          = 2,  -- bypass inactive/active opacity multipliers
     float            = true,
-    size             = { 390, 320 },
-    move             = { 1016, 261 },
+    size             = { 1626, 116 },
+    move             = { -13, 790 },
 })
