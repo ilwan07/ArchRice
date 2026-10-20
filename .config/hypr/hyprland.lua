@@ -261,6 +261,7 @@ hl.bind(mainMod .. " + M",         hl.dsp.exec_cmd("python ~/.config/hypr/script
 hl.bind(mainMod .. " + SHIFT + CTRL + M", hl.dsp.exec_cmd("python ~/.config/hypr/scripts/choose-wallpaper.py"))
 hl.bind(mainMod .. " + J",         hl.dsp.exec_cmd([[hyprctl eval 'hl.config({input={kb_variant="",kb_layout="us"}})']]))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({input={kb_layout="fr",kb_variant="oss_latin9"}})']]))
+hl.bind(mainMod .. " + SHIFT + I", hl.dsp.exec_cmd("hyprctl activewindow | wl-copy && hyprctl notify 5 3000 0 fontsize:16 'Copied window info to clipboard'"))
 hl.bind(mainMod .. " + W",         hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + space",     hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F",         hl.dsp.exec_cmd(browser))
