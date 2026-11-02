@@ -14,13 +14,12 @@ WARNING: for the script files requiring sudo, make sure they're owned by root an
 
 ### Dependencies
 
-- hyprland (both .conf and .lua configs in the repo)
+- hyprland
 - hyprpaper
 - kitty
 - starship
 - waybar
 - ttf-cascadia-code-nerd
-- woff2-font-awesome
 - firefox
 - nemo
 - wofi
