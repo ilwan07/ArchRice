@@ -193,9 +193,9 @@ hl.config({
 hl.config({
     input = {
         kb_layout  = "fr",
-        kb_variant = "oss_latin9",
+        kb_variant = "oss",
         kb_model   = "",
-        kb_options = "caps:shiftlock",
+        kb_options = "caps:shiftlock,compose:rctrl",
         kb_rules   = "",
         numlock_by_default = true,
 
